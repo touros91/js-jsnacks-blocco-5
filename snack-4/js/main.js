@@ -4,10 +4,14 @@
 
 function fonda(arrayPrimo, arraySecondo){
     var arrayTerzo = [];
-    for (var i = 0; i < arrayPrimo.length; i++) {
+    if (arrayPrimo.length == arraySecondo.length) {
+        for (var i = 0; i < arrayPrimo.length; i++) {
             arrayTerzo.push(arrayPrimo[i]);
             arrayTerzo.push(arraySecondo[i]);
         }
+    } else {
+        console.log("Errore! I due array non hanno la stessa lunghezza.");
+    }
     return arrayTerzo;
 }
 
@@ -15,11 +19,8 @@ var arrayPrimo = ["a", "b", "c"];
 
 var arraySecondo = [1, 2, 3];
 
-if (arrayPrimo.length == arraySecondo.length) {
-    var fondaArray = fonda(arrayPrimo, arraySecondo);
-    console.log(fondaArray); 
-} else {
-    console.log("Errore! I due array non hanno la stessa lunghezza.")
-}
+var fondaArray = fonda(arrayPrimo, arraySecondo);
+console.log(fondaArray);
+
 
 

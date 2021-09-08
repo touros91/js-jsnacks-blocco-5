@@ -6,6 +6,9 @@
 
 function arrayElementSelect(array, a, b) {
     var newArray = [];
+    while (isNaN(a) || a >= b || a < 0 || a >= array.length - 1 || isNaN(b) || b > array.length - 1) {
+        return false;
+    }
     for (var i = a; i <= b; i++) {
         newArray.push(array[i]);
     }
@@ -16,20 +19,8 @@ var mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "lugli
 
 var inizio = parseInt(prompt("Inserisci l'indice dell'array da dove vuoi iniziare la selezione"));
 
-while (isNaN(inizio) || inizio >= fine || inizio < 0 || inizio >= mesi.length - 1) {
-    alert("Errore! L'indice di inizio deve essere un numero, non può essere minore di zero, deve essere minore dell'indice di fine e minore della lunghezza dell'array -1.");
-    inizio = parseInt(prompt("Inserisci l'indice dell'array da dove vuoi iniziare la selezione"));
-}
-
 var fine = parseInt(prompt("Inserisci l'indice dell'array dove vuoi finire la selezione"));
-
-while (isNaN(fine) || fine > mesi.length - 1){
-    alert("Errore! L'indice di fine deve essere un numero, maggiore dell'indice di inizio e non può essere più grande della lunghezza dell'array -1.")
-    fine = parseInt(prompt("Inserisci l'indice dell'array dove vuoi finire la selezione"));
-}
 
 var nuovoArray = arrayElementSelect(mesi, inizio, fine);
 
 console.log(nuovoArray);
-
-alert(`Il nuovo array generato è composto dai seguenti elementi: ${nuovoArray}`);
