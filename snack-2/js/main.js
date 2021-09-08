@@ -65,7 +65,7 @@ var pesoZucchineLunghe = 0;
 
 for (var i = 0; i < zucchine.length; i++) {
     if (zucchine[i].lunghezza < 15) {
-        zucchineCorte.push(zucchine[i])
+        zucchineCorte.push(zucchine[i]);
         pesoZucchineCorte += zucchine[i].peso;
     } else {
         zucchineLunghe.push(zucchine[i]);
