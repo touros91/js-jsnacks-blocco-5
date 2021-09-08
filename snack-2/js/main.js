@@ -60,25 +60,17 @@ var zucchine = [
 
 var zucchineCorte = [];
 var zucchineLunghe = [];
+var pesoZucchineCorte = 0;
+var pesoZucchineLunghe = 0;
 
 for (var i = 0; i < zucchine.length; i++) {
     if (zucchine[i].lunghezza < 15) {
         zucchineCorte.push(zucchine[i])
+        pesoZucchineCorte += zucchine[i].peso;
     } else {
         zucchineLunghe.push(zucchine[i]);
+        pesoZucchineLunghe += zucchine[i].peso;
     }
-}
-
-var pesoZucchineCorte = 0;
-
-for (var i = 0; i < zucchineCorte.length; i++) {
-    pesoZucchineCorte += zucchineCorte[i].peso;
-}
-
-var pesoZucchineLunghe = 0;
-
-for (var i = 0; i < zucchineLunghe.length; i++) {
-    pesoZucchineLunghe += zucchineLunghe[i].peso;
 }
 
 console.log("Il peso delle zucchine corte è: " + pesoZucchineCorte / 1000 + "kg");
