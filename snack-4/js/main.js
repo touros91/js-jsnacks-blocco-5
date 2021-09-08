@@ -15,9 +15,11 @@ var arrayPrimo = ["a", "b", "c"];
 
 var arraySecondo = [1, 2, 3];
 
-var fondaArray = fonda(arrayPrimo, arraySecondo);
-
-console.log(fondaArray);
-
+if (arrayPrimo.length == arraySecondo.length) {
+    var fondaArray = fonda(arrayPrimo, arraySecondo);
+    console.log(fondaArray); 
+} else {
+    console.log("Errore! I due array non hanno la stessa lunghezza.")
+}
 
 
