@@ -1,6 +1,6 @@
-// Crea un array di 10 oggetti che rappresentano una zucchina, indicando
-// per ognuna varietà, peso e lunghezza.
-// Calcola quanto pesano tutte le zucchine.
+// Crea 10 oggetti che rappresentano una zucchina.
+// Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 
 var zucchine = [
     {
@@ -55,12 +55,19 @@ var zucchine = [
     },
 ];
 
-// Calcola quanto pesano tutte le zucchine.
+//  Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 
-var pesoZucchine = 0;
+var zucchineCorte = [];
+var zucchineLunghe = [];
 
-for(var i = 0; i < zucchine.length; i++) {
-    pesoZucchine += zucchine[i].peso;
+for (var i = 0; i < zucchine.length; i++) {
+    if (zucchine[i].lunghezza < 15) {
+        zucchineCorte.push(zucchine[i])
+    } else {
+        zucchineLunghe.push(zucchine[i]);
+    }
 }
 
-console.log("Il peso di tutte le zucchine è: " + pesoZucchine / 1000 + "kg");
+console.log(zucchineCorte);
+console.log(zucchineLunghe);
