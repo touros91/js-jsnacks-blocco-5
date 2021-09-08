@@ -13,9 +13,23 @@ function arrayElementSelect(array, a, b) {
 }
 
 var mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
-var start = 2;
-var end = 5;
 
-var nuovoArray = arrayElementSelect(mesi, start, end);
+var inizio = parseInt(prompt("Inserisci l'indice dell'array da dove vuoi iniziare la selezione"));
+
+while (inizio >= fine || inizio < 0 || inizio >= mesi.length - 1) {
+    alert("Errore! L'indice di inizio non può essere minore di zero, deve essere minore dell'indice di fine e minore della lunghezza dell'array -1.");
+    inizio = parseInt(prompt("Inserisci l'indice dell'array da dove vuoi iniziare la selezione"));
+}
+
+var fine = parseInt(prompt("Inserisci l'indice dell'array dove vuoi finire la selezione"));
+
+while (fine > mesi.length - 1){
+    alert("Errore! L'indice di fine deve essere maggiore dell'indice di inizio e non può essere più grande della lunghezza dell'array -1.")
+    fine = parseInt(prompt("Inserisci l'indice dell'array dove vuoi finire la selezione"));
+}
+
+var nuovoArray = arrayElementSelect(mesi, inizio, fine);
 
 console.log(nuovoArray);
+
+alert(`Il nuovo array generato è composto dai seguenti elementi: ${arrayElementSelect(mesi, inizio, fine)}`);
