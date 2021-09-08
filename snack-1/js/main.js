@@ -63,4 +63,4 @@ for(var i = 0; i < zucchine.length; i++) {
     pesoZucchine += zucchine[i].peso;
 }
 
-console.log("Il peso di tutte le zucchine è: " + pesoZucchine + "gr");
+console.log("Il peso di tutte le zucchine è: " + pesoZucchine / 1000 + "kg");
