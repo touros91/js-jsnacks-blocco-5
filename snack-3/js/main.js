@@ -2,8 +2,7 @@
 // girata (es. Ciao -> oaiC)
 
 
-function reverse (parola){
- 
+function reverse(parola){
     var parolaReverse = "";
     for (var i = parola.length - 1; i >= 0; i--) {
             parolaReverse += parola.charAt(i);
@@ -11,6 +10,6 @@ function reverse (parola){
     return parolaReverse;
 }
 
-var parolaUtente = prompt("Inserisci una parola");
+var parolaGirata = reverse(prompt("Inserisci una parola"));
 
-console.log(reverse(parolaUtente));
+console.log(parolaGirata);
