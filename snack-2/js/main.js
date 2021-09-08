@@ -69,5 +69,17 @@ for (var i = 0; i < zucchine.length; i++) {
     }
 }
 
-console.log(zucchineCorte);
-console.log(zucchineLunghe);
+var pesoZucchineCorte = 0;
+
+for (var i = 0; i < zucchineCorte.length; i++) {
+    pesoZucchineCorte += zucchineCorte[i].peso;
+}
+
+var pesoZucchineLunghe = 0;
+
+for (var i = 0; i < zucchineLunghe.length; i++) {
+    pesoZucchineLunghe += zucchineLunghe[i].peso;
+}
+
+console.log("Il peso delle zucchine corte è: " + pesoZucchineCorte / 1000 + "kg");
+console.log("Il peso delle zucchine lunghe è: " + pesoZucchineLunghe / 1000 + "kg");
