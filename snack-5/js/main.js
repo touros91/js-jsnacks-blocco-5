@@ -32,4 +32,4 @@ var nuovoArray = arrayElementSelect(mesi, inizio, fine);
 
 console.log(nuovoArray);
 
-alert(`Il nuovo array generato è composto dai seguenti elementi: ${arrayElementSelect(mesi, inizio, fine)}`);
+alert(`Il nuovo array generato è composto dai seguenti elementi: ${nuovoArray}`);
