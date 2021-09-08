@@ -4,7 +4,6 @@
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione
 // compresa tra “a” e “b”
 
-
 function arrayElementSelect(array, a, b) {
     var newArray = [];
     for (var i = a; i <= b; i++) {
@@ -13,10 +12,10 @@ function arrayElementSelect(array, a, b) {
     return newArray;
 }
 
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
 var start = 2;
-var end = 6;
+var end = 5;
 
-var nuovoArray = arrayElementSelect(arr, start, end);
+var nuovoArray = arrayElementSelect(mesi, start, end);
 
 console.log(nuovoArray);
