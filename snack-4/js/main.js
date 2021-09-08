@@ -5,11 +5,9 @@
 function fonda(arrayPrimo, arraySecondo){
     var arrayTerzo = [];
     for (var i = 0; i < arrayPrimo.length; i++) {
-        for (var i = 0; i < arraySecondo.length; i++) {
             arrayTerzo.push(arrayPrimo[i]);
             arrayTerzo.push(arraySecondo[i]);
         }
-    }
     return arrayTerzo;
 }
 
@@ -17,9 +15,9 @@ var arrayPrimo = ["a", "b", "c"];
 
 var arraySecondo = [1, 2, 3];
 
-var arrayTerzo = [];
+var fondaArray = fonda(arrayPrimo, arraySecondo);
 
-console.log(fonda(arrayPrimo, arraySecondo));
+console.log(fondaArray);
 
 
 
