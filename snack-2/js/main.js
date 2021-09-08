@@ -73,5 +73,8 @@ for (var i = 0; i < zucchine.length; i++) {
     }
 }
 
+console.log(zucchineCorte);
+console.log(zucchineLunghe);
+
 console.log("Il peso delle zucchine corte è: " + pesoZucchineCorte / 1000 + "kg");
 console.log("Il peso delle zucchine lunghe è: " + pesoZucchineLunghe / 1000 + "kg");
